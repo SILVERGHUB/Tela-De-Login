@@ -1,0 +1,48 @@
+/* Define a cor de fundo da página */
+body {
+	background-color: #f2f2f2;
+}
+
+/* Define o estilo do cabeçalho */
+h1 {
+	text-align: center;
+	font-size: 2.5em;
+	margin-top: 1em;
+}
+
+/* Define o estilo da caixa de entrada de texto e do botão */
+input[type="text"], button {
+	font-size: 1em;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: none;
+	border-radius: 3px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Define o estilo do botão de adicionar */
+#adicionar {
+	background-color: #4CAF50;
+	color: white;
+}
+
+/* Define o estilo da lista */
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Define o estilo dos itens da lista */
+li {
+	margin: 0.5em;
+	padding: 0.5em;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Define o estilo da linha riscada quando um item da lista é marcado como concluído */
+li input[type="checkbox"]:checked + label {
+	text-decoration: line-through;
+}

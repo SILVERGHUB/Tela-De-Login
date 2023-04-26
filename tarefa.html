@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarefa</title>
+	<link rel="stylesheet" href="tarefa.css">
+</head>
+<body>
+	<h1>Tarefa</h1>
+
+	<label for="texto">Texto ou Palavra:</label>
+	<input id="texto" name="texto" type="text">
+	<button id="adicionar" onclick="adicionarTexto()">Adicionar</button>
+
+	<ul id="lista"></ul>
+
+	<script>
+		function adicionarTexto() {
+			var texto = document.getElementById("texto").value;
+			if (texto) {
+				var lista = document.getElementById("lista");
+				var item = document.createElement("li");
+				var checkbox = document.createElement("input");
+				checkbox.type = "checkbox";
+				checkbox.value = texto;
+				checkbox.onclick = function() {
+					if (this.checked) {
+						this.parentElement.style.textDecoration = "line-through";
+					} else {
+						this.parentElement.style.textDecoration = "none";
+					}
+				};
+				var label = document.createElement("label");
+				label.innerHTML = texto;
+				var remover = document.createElement("button");
+				remover.innerHTML = "Remover";
+				remover.onclick = function() {
+					this.parentElement.remove();
+				};
+				item.appendChild(checkbox);
+				item.appendChild(label);
+				item.appendChild(remover);
+				lista.appendChild(item);
+				document.getElementById("texto").value = "";
+			}
+		}
+	</script>
+</body>
+</html>
